@@ -572,7 +572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnTime: 2
-  _enemyPrefab: {fileID: 4493914613880827488, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
+  _enemyPrefab: {fileID: 7994123105026361822, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
 --- !u!1001 &2084149181
 PrefabInstance:
   m_ObjectHideFlags: 0

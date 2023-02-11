@@ -1,13 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Drawing;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private float _spawnTime = 2f;
-    [SerializeField] private GameObject _enemyPrefab;
+    [SerializeField] private Enemy _enemyPrefab;
 
     private Transform[] _spawnPoints;
 
@@ -19,11 +16,13 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator Spawner()
     {
+        var waitFewSeconds = new WaitForSeconds(_spawnTime);
+
         for (int i = 1; i < _spawnPoints.Length; i++)
         {
             Instantiate(_enemyPrefab, _spawnPoints[i].transform.position, _spawnPoints[i].transform.rotation);
 
-            yield return new WaitForSeconds(_spawnTime);
+            yield return waitFewSeconds;
         }
     }
 }
