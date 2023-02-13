@@ -8,7 +8,7 @@ public class EnemySpawner : MonoBehaviour
 
     private Transform[] _spawnPoints;
 
-    void Start()
+    private void Start()
     {
         _spawnPoints = GetComponentsInChildren<Transform>();
         StartCoroutine(Spawner());

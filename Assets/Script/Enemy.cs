@@ -3,16 +3,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private int _delay = 10;
+    [SerializeField] private float _delay = 10f;
 
     private void Start()
     {
-        StartCoroutine(Destroy());
-    }
-
-    private IEnumerator Destroy()
-    {
-        yield return new WaitForSeconds(_delay);
-        Destroy(gameObject);
+        Destroy(gameObject, _delay);
     }
 }
